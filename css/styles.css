@@ -1,0 +1,99 @@
+html {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 26px;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.visibility-hidden {
+
+}
+
+.top-logo {
+	background-color: white;
+}
+
+.site-navigation {
+	background-color: white;
+	list-style: none;
+}
+
+.site-navigation a {	
+	color: black;
+}
+
+.site-navigation a:hover {
+	color: #81b3d2;
+}
+
+.site-navigation a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.welcome-banner {
+	width: 1200px;
+	height: 565px;
+	background-color: blue;
+	background-image: url("../img/background-photo.jpg");
+}
+
+.abstract {
+	background-color: white;
+}
+
+.short-description {
+	width: 440px;
+	line-height: 21px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 21px;
+}
+
+.better-than-gc {
+	width: 490px;
+	line-height: 26px;
+	font-weight: 400;
+	color: #333333;
+}
+
+.hotel-searching h2 {
+	line-height: 36px;
+	font-size: 30px;
+	font-weight: bold;	
+}
+
+.hotel-searching p {
+	line-height: 24px;
+	color: #333333;
+}
+
+.button {
+	color: white;
+}
+
+.hotel-searching > .button {
+	background-color: #766357;
+}
+
+footer {
+	background-color: white;
+	opacity: 0.9;
+}
+
+.hashtag-link {
+	color: black;
+}
+
+.footer-container ul {
+	list-style: none;
+}
+
+.footer-container a {
+	color: black;
+	text-decoration: none;
+}
