@@ -74,7 +74,7 @@
         <ul>
           <li class="reason-description gray-gradient">
             <h3>Небольшая площадь</h3>
-            <p class="reason-number"> №2 </p>
+            <p class="reason-number"> №3 </p>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
           <li class="reason-description gray-gradient">
@@ -95,19 +95,45 @@
         <p>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button type="button" class="button">Поиск гостиницы в Седоне</button>
         <!-- Где-то здесь может быть форма брониронивая гостиницы-->
+        <form action="https://echo.htmlacademy.ru" method="post" class="hotel-searching-form">
+          <label class="hotel-searching-label">
+            Дата заезда:
+            <input type="date" name="arrival-date">
+            <img src="img/calendar.svg" alt="Иконка календаря">
+          </label>
+          <label class="hotel-searching-label">
+            Дата выезда:
+            <input type="date" name="departure-date">
+            <img src="img/calendar.svg" alt="Иконка календаря">
+          </label>
+          <fieldset>
+            <legend>Взрослые:</legend>
+            <button type="button" class="counter-button">-</button>
+            <input type="text" name="adults-count">                        
+            <button type="button" class="counter-button">+</button>
+          </fieldset>          
+          <fieldset>
+            <legend>Дети:</legend>
+            <button type="button" class="counter-button">-</button>
+            <input type="text" name="children-count">
+            <button type="button" class="counter-button">+</button>
+          </fieldset>
+          <input type="submit" value="Найти">
+        </form>
       </section>
       <section class="sedona-location">
         <h2 class="visibility-hidden">Местоположение Седоны</h2>
         <!-- Здесь будет карта -->
+        <img src="img/map.jpg" alt="Местоположение Седоны: к Югу от Флагстаффа по шоссе 89A" width="1200" height="594">
       </section>
     </main>
     <footer>
       <a href="#" class="hashtag-link">#visitsedona</a>
       <div class="footer-social">        
         <ul>
-          <li><a class="social-button" href="#">Twitter</a></li>
-          <li><a class="social-button" href="#">Facebook</a></li>
-          <li><a class="social-button" href="#">Youtube</a></li>
+          <li><a class="social-button" href="#">Седона в Twitter</a></li>
+          <li><a class="social-button" href="#">Седона в Facebook</a></li>
+          <li><a class="social-button" href="#">Youtube Седоны</a></li>
         </ul>
       </div>
       <p>
