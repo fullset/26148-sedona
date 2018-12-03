@@ -106,18 +106,20 @@
             <input type="date" name="departure-date">
             <img src="img/calendar.svg" alt="Иконка календаря">
           </label>
-          <fieldset>
-            <legend>Взрослые:</legend>
-            <button type="button" class="counter-button">-</button>
-            <input type="text" name="adults-count">                        
-            <button type="button" class="counter-button">+</button>
-          </fieldset>          
-          <fieldset>
-            <legend>Дети:</legend>
-            <button type="button" class="counter-button">-</button>
-            <input type="text" name="children-count">
-            <button type="button" class="counter-button">+</button>
-          </fieldset>
+          <div class="people-counter">
+            <fieldset>
+              <legend>Взрослые:</legend>
+              <button type="button" class="counter-button">-</button>
+              <input type="text" name="adults-count">
+              <button type="button" class="counter-button">+</button>
+            </fieldset>          
+            <fieldset>
+              <legend>Дети:</legend>
+              <button type="button" class="counter-button">-</button>
+              <input type="text" name="children-count">
+              <button type="button" class="counter-button">+</button>
+            </fieldset>
+          </div>
           <input type="submit" value="Найти">
         </form>
       </section>
