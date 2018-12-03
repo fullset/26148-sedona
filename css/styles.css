@@ -136,6 +136,15 @@ a {
 	background-color: #766357;
 }
 
+.hotel-searching > .button:hover {
+    background-color: #604e43;
+}
+
+.hotel-searching > .active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
+}
+
 .hotel-searching-form {
     color: black;
     line-height: 1.86;
@@ -151,6 +160,27 @@ a {
     background-color: #81b3d2;
 }
 
+.hotel-searching-form input[type="submit"]:hover {
+    background-color: #669ec0;
+}
+
+.hotel-searching-form input[type="submit"]:active {
+    color: rgba(255,255,255 0.3);
+    background-color: #5496bd;
+}
+
+.hotel-searching-form input[type="date"] {
+    background-color: #f2f2f2;
+}
+
+.hotel-searching-form input[type="date"]:hover {
+    background-color: #ebebeb;
+}
+
+.hotel-searching-form input[type="date"]:active {
+    background-color: white;
+}
+
 .catalog-list {
     list-style: none;
 }
@@ -161,6 +191,14 @@ a {
     font-weight: bold;
     text-align: left;
 }
+
+.catalog-item-name:hover {
+    color: #81b3d2;
+}
+
+.catalog-item-name:active {
+    color: rgba(0, 0, 0, 0.3);
+} 
 
 .catalog-item-type,
 .catalog-item-price {
@@ -180,8 +218,26 @@ a {
     background-color: #81b3d2;
 }
 
+.button-blue:hover {
+    background-color: #669ec0;
+}
+
+.button-blue:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;
+}
+
 .button-brown {
     background-color: #766357;
+}
+
+.button-brown:hover {
+    background-color: #604e43;
+}
+
+.button-brown:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
 }
 
 .catalog-item-stars {
