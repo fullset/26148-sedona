@@ -2,6 +2,7 @@ html {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 14px;
 	text-transform: uppercase;
+    background-color: #fff;
 }
 
 a {
@@ -20,12 +21,7 @@ a {
 	overflow: hidden;
 }
 
-.top-logo {
-	background-color: white;
-}
-
-.site-navigation {
-	background-color: white;
+.site-navigation {	
 	list-style: none;
 }
 
@@ -43,14 +39,15 @@ a {
 }
 
 .welcome-banner {
-	width: 1200px;
-	height: 565px;
-	background-color: blue;
+	background-color:  #e4eff6;
 	background-image: url("../img/background-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
 }
 
-.abstract {
-	background-color: white;
+.welcome-banner img {
+    margin: 78px auto;
 }
 
 .short-description {
@@ -65,7 +62,7 @@ a {
 	width: 490px;
 	line-height: 1.86;
 	font-weight: normal;
-	color: #333333;
+	color: #333;
 }
 
 .advantages ul {
@@ -109,7 +106,7 @@ a {
 }
 
 .gray-gradient {
-	background-color: #eeeeee;
+	background-color: #eee;
 }
 
 .reason-number:before,
@@ -125,11 +122,11 @@ a {
 
 .hotel-searching p {
 	line-height: 1.71;
-	color: #333333;
+	color: #333;
 }
 
 .button {
-	color: white;
+	color: #fff;
 }
 
 .hotel-searching > .button {
@@ -146,7 +143,7 @@ a {
 }
 
 .hotel-searching-form {
-    color: black;
+    color: #000;
     line-height: 1.86;
     text-align: left;
 }
@@ -204,7 +201,7 @@ a {
 .catalog-item-price {
     line-height: 1.5;
     text-align: left;   
-    color: #333333;
+    color: #333;
 }
 
 .catalog-item-description .button {
@@ -249,11 +246,10 @@ a {
     font-weight: normal;
     line-height: 1.5;
     text-align: center;
-    color: #333333;
+    color: #333;
 }
 
-.footer-container {
-	background-color: white;
+.footer-container {	
 	opacity: 0.9;
 }
 
@@ -261,7 +257,7 @@ a {
 	font-size: 21px;
   	font-weight: bold;
 	line-height: 1.24;
-	color: #000000;
+	color: #000;
 }
 
 .footer-container ul {
@@ -281,5 +277,5 @@ a {
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 1.86;	
-    color: #000000;
+    color: #000;
 }
