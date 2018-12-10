@@ -1,192 +1,214 @@
 body {
-	font-family: 'PT Sans', sans-serif;
-	font-size: 14px;
-	text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
     background-color: #f2f2f2;
-    width: 1200px;
-    padding: 10px;    
-
-    /*display: flex;
-    flex-direction: column;*/
-
+    min-width: 1200px;
+    
+    display: flex;
+    justify-content: center;    
 }
 
 a {
-	text-decoration: none;
-	font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.main-header,
-.container,
-.footer-container,
- {
-	width: 1200px;
-	background-color: #fff;	
+.whole-content {
+    width: 1200px;
+    padding-top: 0px; 
+    background-color: #fff;
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
-
-.visibility-hidden {	
-	position: absolute;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0;
-	border: 0;
-	height: 1px; 
-	width: 1px; 
-	overflow: hidden;
+.visibility-hidden {    
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden;
 }
 
-.site-navigation {	
-	display: flex;
-
-	list-style: none;
-	outline: 2px solid yellow;
+.logo-wrapper {
+    position: relative;
+    z-index: 1;
 }
 
-.site-navigation a {	
-	color: black;
-	line-height: 1.86;
+.top-logo {
+    position: absolute;
+    top: 0;
+    left: 529px;
+    height: 71px;
+}
+
+.site-navigation {  
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.site-navigation a {    
+    color: black;
+    line-height: 1.86;
 }
 
 .site-navigation a:hover {
-	color: #81b3d2;
+    color: #81b3d2;
 }
 
 .site-navigation a:active {
-	color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .welcome-banner {
-	background-color: #e4eff6;
-	background-image: url("../img/background-photo.jpg");		
+    position:relative;
+
+    background-color: #e4eff6;
+    background-image: url("../img/background-photo.jpg");       
     background-repeat: no-repeat;
     background-size: cover;
     
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .welcome-banner img {
     margin: 78px auto;
 }
 
+.welcome-banner::after {
+    content: url("../img/polygon.svg");    
+    position: absolute;
+    width: 100%;   
+
+    /*Костыль. Но похоже, в картинке есть прозрачная полоса
+        снизу, и вот так я ее убираю.*/
+    bottom: -3px; 
+
+}
+
 .abstract {
-	padding-top: 61px;
-	padding-bottom: 56px;
+    padding-top: 61px;
+    padding-bottom: 56px;
 }
 
 .first-reason,
 .second-reason{
-	display: flex;	
-	color: #fff;
+    display: flex;  
+    color: #fff;
 }
 
 .second-reason {
-	flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .other-reasons ul {
-	list-style: none;
-	display: flex;	
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 0;
-
-	outline: 2px solid red;
+    list-style: none;
+    display: flex;  
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 .short-description {
-	width: 440px;
-	text-align: center;
-	font-weight: bold;
-	font-size: 21px;
+    width: 440px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
     line-height: 1.24;
 }
 
 .better-than-gc {
-	width: 490px;
-	line-height: 1.86;
-	font-weight: normal;
-	color: #333;
+    width: 490px;
+    line-height: 1.86;
+    font-weight: normal;
+    color: #333;
 }
 
 .advantages ul {
-	list-style: none;
-	display: flex;
-	padding-left: 0;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
 }
 
 .advantages li {
-	width: 400px;
+    width: 400px;
 }
 
 .reason-description {
-	width: 400px;
+    width: 400px;
 }
 
 .reason-description h3 {
-	font-size: 21px;
-	font-weight: bold;
-	line-height: 1;
-	
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    
 }
 
-.reason-description p {		
-	font-weight: normal;
-	line-height: 1.5;
+.reason-description p {     
+    font-weight: normal;
+    line-height: 1.5;
 }
 
 .advantages h3 {
-	font-size: 21px;
-	font-weight: bold;
-	line-height: 1;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
 }
 
 .advantages p {
-	font-weight: normal;
-	line-height: 1.5;	
+    font-weight: normal;
+    line-height: 1.5;   
 }
 
 .blue-gradient {
-	background-color: #81b3d2;
+    background-color: #81b3d2;
 }
 
 .gray-gradient {
-	background-color: #eee;
+    background-color: #eee;
 }
 
 .reason-number:before,
 .reason-number:after {
-	content: "—";
+    content: "—";
 }
 
 .hotel-searching {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-	position: relative;
+    position: relative;
 
-	outline: 2px solid green;
+    padding-top: 57px;
 }
 
-.hotel-searching h2 {	
-
-	font-size: 30px;
-	font-weight: bold;	
+.hotel-searching h2 {   
+    font-size: 30px;
+    font-weight: bold;  
     line-height: 1.2;
 }
 
 .hotel-searching p {
-	line-height: 1.71;
-	color: #333;
+    line-height: 1.71;
+    color: #333;
 }
 
 .button {
-	color: #fff;
+    color: #fff;
 }
 
 .hotel-searching > .button {
-	background-color: #766357;
+    background-color: #766357;
 }
 
 .hotel-searching > .button:hover {
@@ -199,15 +221,16 @@ a {
 }
 
 .hotel-searching-form {
-	position: absolute;
-	top: 100%;
+    position: absolute;
+    top: 100%;
 
-	width: 568px;
+    width: 568px;
     color: #000;
     line-height: 1.86;
     text-align: left;
 
-    outline: 2px solid yellowgreen;
+    background-color: #fff;
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .hotel-searching-form input[type="date"],
@@ -224,7 +247,7 @@ a {
 }
 
 .hotel-searching-form input[type="submit"]:active {
-    color: rgba(255,255,255 0.3);
+    color: rgba(255,255,255, 0.3);
     background-color: #5496bd;
 }
 
@@ -237,13 +260,12 @@ a {
 }
 
 .hotel-searching-form input[type="date"]:active {
-    background-color: white;
+    background-color: #fff;
 }
 
 .filter-results {
-	padding-left: 72px;
-	padding-right: 72px;
-	outline: 3px solid #0403ee;	
+    padding-left: 72px;
+    padding-right: 72px;
 }
 
 .catalog-list {
@@ -252,10 +274,8 @@ a {
 }
 
 .catalog-item {
-	padding: 30px 0px;
-	display: flex;
-
-	outline: 3px solid #04aadd;
+    padding: 30px 0px;
+    display: flex;
 }
 
 .catalog-item-name {
@@ -284,7 +304,7 @@ a {
     font-weight: bold;
     line-height: 1.5;
     text-align: left;
-    color: white;
+    color: #fff;
 }
 
 .button-blue {
@@ -325,38 +345,35 @@ a {
     color: #333;
 }
 
-.footer-container {	
-	position: relative;	
-	outline: 3px solid black;
+.footer-container { 
+    position: relative; 
 }
 
 .footer-wrapper {
-	position: absolute;	
-	width: 100%;
-	bottom: 0px;
-	display: flex;
-	justify-content: space-between;
+    position: absolute; 
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
 
-	background-color: #fff;
-	opacity: 0.9;
-
-	outline: 2px dashed pink;	
+    background-color: #fff;
+    opacity: 0.9;
 }
 
 .hashtag-link {
-	font-size: 21px;
-  	font-weight: bold;
-	line-height: 1.24;
-	color: #000;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.24;
+    color: #000;
 }
 
 .footer-container ul {
-	list-style: none;
+    list-style: none;
 }
 
 .footer-container a {
-	color: black;
-	text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 .social-button {
@@ -364,8 +381,8 @@ a {
 }
 
 .footer-container span {
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 1.86;	
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.86;  
     color: #000;
 }

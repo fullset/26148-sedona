@@ -1,0 +1,47 @@
+body {
+    outline: 1px dotted brown;
+}
+
+.whole-content {
+    outline: 1px solid brown;   
+}
+
+.main-header {
+    outline: 3px dashed lightgreen;   
+}
+
+.welcome-banner::after {
+    outline: 3px solid red;
+}
+
+.site-navigation {  
+    outline: 2px solid yellow;
+}
+
+.other-reasons ul {
+    outline: 2px solid red;
+}
+
+.hotel-searching {
+    outline: 2px solid green;
+}
+
+.hotel-searching-form {
+    outline: 2px solid yellowgreen;
+}
+
+.filter-results {
+    outline: 3px solid #0403ee; 
+}
+
+.catalog-item {
+    outline: 3px solid #04aadd;
+}
+
+.footer-container { 
+    outline: 3px solid black;
+}
+
+.footer-wrapper {
+    outline: 2px dashed pink;   
+}
