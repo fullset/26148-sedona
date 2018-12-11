@@ -10,6 +10,14 @@ body {
     outline: 3px dashed lightgreen;   
 }
 
+.site-navigation li {
+    outline: 1px dotted darkblue;
+}
+
+.welcome-banner {
+    outline: 2px solid purple;
+}
+
 .welcome-banner::after {
     outline: 3px solid red;
 }
@@ -44,4 +52,24 @@ body {
 
 .footer-wrapper {
     outline: 2px dashed pink;   
+}
+
+.hashtag-link {
+    outline: 2px dotted purple;
+}
+
+.footer-social {
+    outline: 2px dotted darkgrey;
+}
+
+.footer-social li {
+    outline: 2px dotted darkred;
+}
+
+.social-button {
+    outline: 2px dotted darkgreen;
+}
+
+.footer-wrapper ps{
+    outline: 2px dotted lightgrey;   
 }
