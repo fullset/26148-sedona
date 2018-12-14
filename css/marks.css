@@ -10,6 +10,14 @@ body {
     outline: 3px dashed lightgreen;   
 }
 
+.logo-wrapper {
+    outline: 2px solid black;
+}
+
+
+.top-logo {
+    outline: 2px dotted tomato;
+}
 .site-navigation li {
     outline: 1px dotted darkblue;
 }
@@ -24,6 +32,14 @@ body {
 
 .site-navigation {  
     outline: 2px solid yellow;
+}
+
+.abstract {
+    outline: 4px solid royalblue;
+}
+
+.abstract p{
+    outline: 4px solid ruby;
 }
 
 .other-reasons ul {
