@@ -486,12 +486,102 @@ a {
     background-color: #5496bd;
 }
 
+.filter-params {    
+    background-color: #669ec0;
+    background-image: url("../img/filter-background.jpg");
+    background-position: 0 -238px;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 87px;
+    padding-bottom: 9px;
+
+    color: #fff;
+}
+
+.filter-params-wrapper {
+    display: flex;
+    justify-content: space-between;    
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.filter-params-wrapper fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;  
+}
+
+.filter-params-wrapper fieldset:not(:first-child){
+    margin-left: 115px;
+}
+
+.filter-params-wrapper legend,
+.filter-cost p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.31;
+}
+
+.filter-params-wrapper legend {
+    margin-bottom: 24px;
+}
+
+.filter-params-wrapper input[type="checkbox"] {    
+    display: none;    
+}
+
+.filter-checkbox-items {
+    position: relative;
+    margin-bottom: 23px;
+    padding-left: 40px;
+}
+
+.checkbox-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 3px;
+}
+
+.checkbox-indicator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;    
+}
+
+.filter-checkbox:checked + .checkbox-indicator {
+    border: none;
+}
+
+.filter-checkbox:checked + .checkbox-indicator::before {
+    content: url("../img/checkbox-on.svg");
+}
+
+.filter-checkbox:checked:disabled + .checkbox-indicator::before {
+    content: url("../img/checkbox-on-2.svg");
+}
+
+.filter-checkbox:disabled + .checkbox-indicator {
+    border-color: #6a6a6a;
+}
+
 .filter-results {
     /*padding-left: 72px;
     padding-right: 72px;*/
 
     /*Временно. TODO: убрать, когда будет делаться фильтр*/
-    margin-top: 150px;   
     margin-bottom: 150px;
 }
 

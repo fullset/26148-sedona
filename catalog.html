@@ -33,7 +33,58 @@
       </header>
       <main class="container">
         <h1 class="visibility-hidden">Подбор жилья в Седоне</h1>
-        <!-- Здесь будет фильтр гостиниц -->      
+        <!-- Здесь будет фильтр гостиниц -->
+        <section class="filter-params">
+          <div class="filter-params-wrapper">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <label class="filter-checkbox-items">
+                <input class="filter-checkbox" type="checkbox" name="services-swimming" checked>
+                <span class="checkbox-indicator"></span>
+                Бассейн
+              </label>
+              <label class="filter-checkbox-items">
+                <input class="filter-checkbox" type="checkbox" name="services-parking">
+                <span class="checkbox-indicator"></span>
+                Парковка
+              </label>
+              <label class="filter-checkbox-items">
+                <input class="filter-checkbox" disabled type="checkbox" name="services-wifi">
+                <span class="checkbox-indicator"></span>
+                Wi-Fi
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <label class="filter-checkbox-items">
+                <input class="filter-checkbox" type="checkbox" name="type-apartments" checked>
+                <span class="checkbox-indicator"></span>
+                Апартаменты
+              </label>
+              <label class="filter-checkbox-items">
+                <input class="filter-checkbox" type="checkbox" name="type-hotel" checked>
+                <span class="checkbox-indicator"></span>
+                Гостиница
+              </label>
+              <label class="filter-checkbox-items">
+                <input class="filter-checkbox" type="checkbox" name="type-motel" disabled checked>
+                <span class="checkbox-indicator"></span>
+                Мотель
+              </label>
+            </fieldset>            
+          </div>
+          <div class="filter-cost">
+            <p>Стоимость в сутки (Р):</p>
+            <div class="filter-cost-range">
+              <label>От<input type="text" value="0" name="filter-min-cost"></label>
+              <label>До<input type="text" value="3000" name="filter-max-cost"></label>
+            </div>
+            <div class="filter-cost-slider">
+              <div class="filter-cost-slider-progress"></div>
+            </div>
+            <button type="button" class="filter-cost-show-results">Показать</button>
+          </div>
+        </section>      
         <section class="filter-results">
           <h2 class="visibility-hidden">Найденные варианты жилья</h2>      
           <!-- Здесь будет настройка сортировки результатов -->
