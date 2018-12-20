@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/marks.css">
   </head>
   <body>
     <div class="whole-content">
@@ -14,7 +13,7 @@
         <div class="header-wrapper">
           <nav class="main-navigation">
             <ul class="site-navigation">
-              <li><a href="info.html">Информация</a></li>  
+              <li><a href="info.html">Информация</a></li> 
               <li><a href="Multimedia.html">Фото и видео</a></li>
             </ul>  
           </nav>
@@ -25,7 +24,7 @@
           </div>
           <nav class="main-navigation">
             <ul class="site-navigation">      
-              <li><a href="map.html">Карта штата</a></li>  
+              <li><a href="map.html">Карта штата</a></li> 
               <li><a class="current-page" href="catalog.html">Гостиницы</a></li>  
             </ul>
           </nav>
@@ -38,39 +37,49 @@
           <div class="filter-params-wrapper">
             <fieldset>
               <legend>Инфраструктура:</legend>
-              <label class="filter-checkbox-items">
-                <input class="filter-checkbox" type="checkbox" name="services-swimming" checked>
-                <span class="checkbox-indicator"></span>
-                Бассейн
-              </label>
-              <label class="filter-checkbox-items">
-                <input class="filter-checkbox" type="checkbox" name="services-parking">
-                <span class="checkbox-indicator"></span>
-                Парковка
-              </label>
-              <label class="filter-checkbox-items">
-                <input class="filter-checkbox" disabled type="checkbox" name="services-wifi">
-                <span class="checkbox-indicator"></span>
-                Wi-Fi
-              </label>
+              <ul>
+                <li>
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="services-swimming" id="services-swimming" checked>
+                  <label class="filter-checkbox-items" for="services-swimming">
+                    Бассейн
+                  </label>              
+                </li>
+                <li>
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="services-parking" id="services-parking">                
+                  <label class="filter-checkbox-items" for="services-parking">
+                    Парковка
+                  </label>
+                </li>
+                <li>              
+                  <input class="visibility-hidden filter-checkbox" disabled type="checkbox" name="services-wifi" id="services-wifi">
+                  <label class="filter-checkbox-items" for="services-wifi">
+                    Wi-Fi
+                  </label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset>
-              <legend>Тип жилья:</legend>
-              <label class="filter-checkbox-items">
-                <input class="filter-checkbox" type="checkbox" name="type-apartments" checked>
-                <span class="checkbox-indicator"></span>
-                Апартаменты
-              </label>
-              <label class="filter-checkbox-items">
-                <input class="filter-checkbox" type="checkbox" name="type-hotel" checked>
-                <span class="checkbox-indicator"></span>
-                Гостиница
-              </label>
-              <label class="filter-checkbox-items">
-                <input class="filter-checkbox" type="checkbox" name="type-motel" disabled checked>
-                <span class="checkbox-indicator"></span>
-                Мотель
-              </label>
+              <legend>Тип жилья:</legend>   
+              <ul>     
+                <li>      
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="type-hotel" id="type-hotel" checked>
+                  <label class="filter-checkbox-items" for="type-hotel">
+                    Гостиница
+                  </label>
+                </li>
+                <li>
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="type-motel" disabled checked id="type-motel">
+                  <label class="filter-checkbox-items" for="type-motel">
+                    Мотель
+                  </label>
+                </li>
+                <li>
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" id="type-apartments" name="type-apartments" checked>
+                  <label class="filter-checkbox-items" for="type-apartments">
+                    Апартаменты
+                  </label>
+                </li>
+              </ul>
             </fieldset>            
           </div>
           <div class="filter-cost">
@@ -83,10 +92,10 @@
               <div class="filter-cost-slider">
                 <div class="filter-cost-slider-progress"></div>
               </div>
-              <div class="range-toggle range-toggle-min"></div>
-              <div class="range-toggle range-toggle-max"></div>
+              <div aria-label="Ползунок минимального уровня цены"  class="range-toggle range-toggle-min"></div>
+              <div aria-label="Ползунок максимального уровня цены" class="range-toggle range-toggle-max"></div>
             </div>
-            <button type="button" class="filter-cost-show-results">Показать</button>
+            <button type="submit" class="filter-cost-show-results">Показать</button>
           </div>
         </section>      
         <section class="filter-results">
@@ -100,8 +109,8 @@
               <button type="button" class="sorting-type">По рейтингу</button>
             </div>
             <div class="sorting-direction-container">
-              <span class="sorting-direction sorting-to-up current-sorting-direction"></span>
-              <span class="sorting-direction sorting-to-down"></span>
+              <button class="sorting-direction sorting-to-up current-sorting-direction" aria-label="Сортировать по возрастанию"></button>
+              <button class="sorting-direction sorting-to-down" aria-label="Сортировать по убыванию"></button>
             </div>
           </div>
           <ul class="catalog-list">
@@ -195,7 +204,7 @@
                 <a class="social-button" href="#">
                   <span class="visibility-hidden">Седона в Twitter</span>
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
-                    <image width="17" height="15" overflow="visible" xlink:href="t.png"/>
+                    <!-- <image width="17" height="15" overflow="visible" xlink:href="img/t.png"/> -->
                     <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
                   </svg>
                 </a></li>
@@ -203,6 +212,7 @@
                 <a class="social-button" href="#">
                   <span class="visibility-hidden">Седона в Facebook</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
+                    <!-- <image width="12" height="22" viewBox="0 0 12 22" overflow="visible" xlink:href="img/fb-icon.png"/> -->
                     <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
                   </svg>
                 </a>
@@ -211,7 +221,7 @@
                 <a class="social-button" href="#">
                   <span class="visibility-hidden">Youtube Седоны</span>
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
-                    <image width="20" height="16" overflow="visible" xlink:href="youtube.png"/>
+                    <!-- <image width="20" height="16" overflow="visible" xlink:href="img/youtube.png"/> -->
                     <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
                   </svg>
                 </a>

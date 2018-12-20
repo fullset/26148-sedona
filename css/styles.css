@@ -16,6 +16,7 @@ a {
 
 .visibility-hidden {    
     position: absolute;
+    display: block;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0;
@@ -58,8 +59,8 @@ a {
     position: absolute;    
 }
 
-.main-navigation {
-    flex-grow: 2;
+.main-navigation:last-child li{    
+    text-align: right;
 }
 
 .site-navigation {  
@@ -72,12 +73,14 @@ a {
 }
 
 .site-navigation li {
+    width: 240px;
     margin: 15px 0;
 }
 
 .site-navigation a {    
     color: black;
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/
+    letter-spacing: normal;
     line-height: 1.86;
 }
 
@@ -104,6 +107,7 @@ a {
     background-image: url("../img/background-photo.jpg");    
     background-color: #e4eff6;         
     background-repeat: no-repeat;
+    background-position: 0 -25px;
     display: flex;
     background-size: cover;
 }
@@ -277,7 +281,7 @@ a {
     max-width: 450px;
     margin: 0;
     padding: 0;
-    margin-bottom: 52px;
+    margin-bottom: 47px;
     line-height: 1.71;
     color: #333;
     text-align: center;
@@ -292,10 +296,12 @@ a {
 }
 
 .hotel-searching > .button {
-    width: 569px;
+    width: 568px;
     padding: 30px 0;
     border: none;
     background-color: #766357;
+
+    cursor: pointer;
 }
 
 .hotel-searching > .button:hover {
@@ -326,9 +332,10 @@ a {
     box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
-.hotel-searching-form input[type="date"],
+.hotel-searching-form input,
 .counter-button {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2;  
+    text-transform: uppercase;  
 }
 
 .form-data-wrapper {
@@ -357,8 +364,11 @@ a {
     font-weight: bold;
     font-size: 14px;
     line-height: 1.86;
+    color: #000;
     
     border: 2px solid #f2f2f2;
+
+    cursor: pointer;
 }
 
 .date-wrapper input:hover {
@@ -372,10 +382,16 @@ a {
     border: 2px solid #e5e5e5;
 }
 
-.date-wrapper svg {
-    position: absolute;
-    fill: #cacaca;
+.date-wrapper button {
+    position: absolute;    
     right: 9px;
+    background: none;
+    border: none;
+    cursor: pointer;
+} 
+
+.date-wrapper svg {
+    fill: #cacaca;
 }
 
 .date-wrapper svg:hover {
@@ -395,6 +411,20 @@ a {
 
 .counter-wrapper {
     display: flex;
+    align-items: center;
+}
+
+.children-counter-wrapper,
+.adults-counter-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.children-counter-wrapper .hotel-searching-label {
+    margin-right: 28px;
+}
+.adults-counter-wrapper .hotel-searching-label  {
+    margin-right: 40px;
 }
 
 .counter-button,
@@ -403,15 +433,20 @@ a {
     padding: 0;
     border: none;
     width: 38px;
-    height: 38px;
+    height: 38px;    
     background-color: #f2f2f2;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
 }
 
 .counter-button {
     position: relative;
     color: #a9a9a9;
     font-size: 26px;
-    line-height: 36px
+    line-height: 36px;
+
+    cursor: pointer;
 }
 
 .button-minus::after {
@@ -474,6 +509,8 @@ a {
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
+
+    cursor: pointer;
 }
 
 .hotel-searching-form input[type="submit"]:hover {
@@ -483,6 +520,10 @@ a {
 .hotel-searching-form input[type="submit"]:active {
     color: rgba(255,255,255, 0.3);
     background-color: #5496bd;
+}
+
+.sedona-location {
+    display: flex;
 }
 
 .filter-params {    
@@ -495,8 +536,8 @@ a {
     justify-content: space-between;
     padding-left: 72px;
     padding-right: 72px;
-    padding-top: 87px;
-    padding-bottom: 9px;
+    padding-top: 82px;
+    padding-bottom: 8px;
 
     color: #fff;
 }
@@ -518,7 +559,7 @@ a {
 }
 
 .filter-params-wrapper fieldset:not(:first-child){
-    margin-left: 115px;
+    margin-left: 118px;
 }
 
 .filter-params-wrapper legend,
@@ -532,20 +573,33 @@ a {
     margin-bottom: 24px;
 }
 
-.filter-params-wrapper input[type="checkbox"] {    
-    display: none;    
+.filter-params-wrapper ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-checkbox-item-wrapper {
+    display: flex;
 }
 
 .filter-checkbox-items {
     position: relative;
-    margin-bottom: 23px;
-    padding-left: 40px;
+    margin-bottom: 25px;
+    padding-left: 39px;
+    display: flex;    
 }
 
-.checkbox-indicator {
+.filter-checkbox:not(:disabled) ~ .filter-checkbox-items {
+    cursor: pointer;
+}
+
+.filter-checkbox-items::before {
+    content: "";
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;    
+
     width: 23px;
     height: 23px;
     box-sizing: border-box;
@@ -553,33 +607,24 @@ a {
     border-radius: 3px;
 }
 
-.checkbox-indicator::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;    
-}
-
-.filter-checkbox:checked + .checkbox-indicator {
+.filter-checkbox:checked + .filter-checkbox-items::before  {
     border: none;
-}
-
-.filter-checkbox:checked + .checkbox-indicator::before {
     content: url("../img/checkbox-on.svg");
 }
 
-.filter-checkbox:checked:disabled + .checkbox-indicator::before {
+.filter-checkbox:checked:disabled + .filter-checkbox-items::before {
+    border: none;
     content: url("../img/checkbox-on-2.svg");
 }
 
-.filter-checkbox:disabled + .checkbox-indicator {
+.filter-checkbox:disabled + .filter-checkbox-items::before {
     border-color: #6a6a6a;
 }
 
 .filter-cost {    
-    width: 320px;
+    width: 318px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 }
 
 .filter-cost p {
@@ -592,7 +637,7 @@ a {
     display: flex;
     justify-content: space-between;
     
-    padding-top: 6px;
+    padding-top: 8px;
     padding-bottom: 6px;
     padding-left: 0;
     padding-right: 30px;
@@ -615,14 +660,14 @@ a {
 }
 
 .filter-cost-range label {
-    padding-left: 60px;
+    padding-left: 65px;
     cursor: pointer;
 }
 
 .filter-cost-range input {
     width: 50px;
     margin: 0;
-    margin-left: 5px;
+    margin-left: 3px;
 
     color: inherit;
     font: inherit;
@@ -639,7 +684,7 @@ a {
     height: 2px;
     width: 100%;
     background-color: rgba(255,255,255,0.3);
-    margin-bottom: 34px;
+    margin-bottom: 32px;
 }
 
 .filter-cost-slider-progress {
@@ -672,14 +717,18 @@ a {
 
 .filter-cost-show-results {
     align-self: center;
-    padding: 5px 34px;  
+    padding: 5px 33px;  
+    margin-right: 9px;
     color: #fff;
     font-size: 14px;
     line-height: 1.5;
+    text-transform: uppercase;
 
     background-color: inherit;
     border: 2px solid #fff;  
     border-radius: 2px;
+
+    cursor: pointer;
 }
 
 .filter-cost-show-results:hover {
@@ -698,7 +747,7 @@ a {
 .sorting-results > p {
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-right: 49px;
+    margin-right: 46px;
     font-size: 21px;
     font-weight: bold;
     line-height: 1.24;
@@ -708,6 +757,8 @@ a {
 .sorting-settings {
     flex-grow: 2;
     display: flex;
+    align-items: center;
+    margin-top: 2px;
 }
 
 .sorting-settings > p,
@@ -751,6 +802,8 @@ a {
 
 .sorting-direction {
     position: relative;
+    background: none;
+    border: none;
 }
 
 .sorting-direction-container {
@@ -764,7 +817,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-12px, -3px);
+    transform: translate(3px, -3px);
     background-color: #fff;
     border: 6px solid transparent; 
     border-top: 12px solid #81b3d2; 
@@ -772,7 +825,7 @@ a {
 }
 
 .sorting-to-up::before {
-    transform: translateY(-9px) rotate(180deg);
+    transform: translateY(-10px) rotate(180deg);
 }
 
 .current-sorting-direction::before {
@@ -784,6 +837,10 @@ a {
 }
 
 .sorting-direction:hover::before {
+    border-top-color: #000;
+}
+
+.sorting-direction:focus::before {
     border-top-color: #000;
 }
 
@@ -805,7 +862,7 @@ a {
 .catalog-item-container {
     margin: 0 72px;
     margin-left: 42px;
-    padding: 30px 0;
+    padding: 27px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -821,7 +878,7 @@ a {
 }
 
 .catalog-item-image {
-    padding: 0 30px;
+    padding: 3px 30px;
     display: flex;
 }
 
@@ -832,11 +889,23 @@ a {
     justify-content: space-between;
 }
 
+.catalog-item-description p {
+    margin-bottom: 10px;
+}
+
+.catalog-item-name {
+    margin: 0;
+}
+
 .catalog-item-name a{
+
+    display: inline-block;
     font-size: 21px;
     line-height: 1.24;
     font-weight: bold;
     text-align: left;
+
+    cursor: pointer;
 }
 
 .catalog-item-name a:visited{
@@ -851,8 +920,14 @@ a {
     color: rgba(0, 0, 0, 0.3);
 } 
 
+.catalog-item-description p {
+    display: flex;
+}
+
 .catalog-item-type,
 .catalog-item-price {
+    margin-bottom: 2px;
+    width: 116px;
     line-height: 1.5;
     text-align: left;   
     color: #333;
@@ -860,17 +935,18 @@ a {
 
 .catalog-item-buttons {
     padding: 0;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .catalog-item-description .button {
-    padding: 4px 17px;
+    padding: 4px 18px;
     font-size: 14px;
     font-weight: bold;
     line-height: 1.5;
     text-align: left;
     color: #fff;
 
+    cursor: pointer;
 }
 
 .button-blue {
@@ -886,7 +962,7 @@ a {
     background-color: #5496bd;
 }
 
-.button-brown {
+.button-brown {    
     background-color: #766357;
 }
 
@@ -901,6 +977,7 @@ a {
 
 .catalog-item-rate-params {
     /*margin-right: 73px;*/
+    padding-top: 3px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -914,9 +991,14 @@ a {
     justify-content: flex-end;
 }
 
+.catalog-item-stars li {
+    margin-left: 6px;
+}
+
 .catalog-item .catalog-item-rating {
     background-color: #f2f2f2;
-    padding: 5px 14px;
+    padding: 3px 12px;
+    margin-bottom: 2px;
     font-weight: normal;
     line-height: 1.5;
     text-align: center;
@@ -936,7 +1018,7 @@ a {
     justify-content: space-between;
     align-items: center;
 
-    padding: 36px 0;
+    padding: 37px 0;
     padding-right: 101px;
     padding-left: 132px;  
 
@@ -945,6 +1027,7 @@ a {
 }
 
 .hashtag-link {
+    width: 165px;
     font-size: 21px;
     font-weight: bold;
     line-height: 1.24;
@@ -978,7 +1061,9 @@ a {
     width: 46px;    
     height: 48px;
     
-    background-color: #81b3d2;    
+    background-color: #81b3d2;  
+
+    cursor: pointer;  
 }
 
 .social-button:hover {
@@ -997,11 +1082,12 @@ a {
     margin: 0;
     display: flex;    
     justify-content: space-between;
-    width: 210px;    
+    width: 200px;    
 }
 
 .copyright span {
     margin: auto 0;
+    margin-top: 7px;
     font-size: 14px;
     font-weight: normal;
     line-height: 1.86;  
@@ -1010,6 +1096,10 @@ a {
 
 .copyright a{
     width: 115px;
+}
+
+.copyright-logo {
+    cursor: pointer;
 }
 
 .copyright-logo:hover path {
