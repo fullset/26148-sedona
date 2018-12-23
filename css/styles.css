@@ -612,7 +612,17 @@ a {
     content: url("../img/checkbox-on.svg");
 }
 
+.filter-checkbox:active + .filter-checkbox-items::before  {
+    border: none;
+    content: url("../img/checkbox-on.svg");
+}
+
 .filter-checkbox:checked:disabled + .filter-checkbox-items::before {
+    border: none;
+    content: url("../img/checkbox-on-2.svg");
+}
+
+.filter-checkbox:active:disabled + .filter-checkbox-items::before  {
     border: none;
     content: url("../img/checkbox-on-2.svg");
 }
@@ -697,8 +707,9 @@ a {
     position: absolute;
     top: 0;
     transform: translateY(-10px);
-    height: 4px;
-    width: 4px;
+    height: 20px;
+    width: 20px;
+    padding: 0;
     background-color: #ababab;
     border: 8px solid #ffffff;
     border-radius: 50%;
@@ -708,7 +719,9 @@ a {
 }
 
 .range-toggle:hover {
-    border-width: 9px
+    /*border-width: 9px*/
+    height: 22px;
+    width: 22px;
 }
 
 .range-toggle-max {
@@ -731,7 +744,8 @@ a {
     cursor: pointer;
 }
 
-.filter-cost-show-results:hover {
+.filter-cost-show-results:hover,
+.filter-cost-show-results:active  {
     background-color: #fff;
     color: #000;
 }
@@ -751,7 +765,6 @@ a {
     font-size: 21px;
     font-weight: bold;
     line-height: 1.24;
-
 }
 
 .sorting-settings {

@@ -39,20 +39,20 @@
               <legend>Инфраструктура:</legend>
               <ul>
                 <li>
-                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="services-swimming" id="services-swimming" checked>
-                  <label class="filter-checkbox-items" for="services-swimming">
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="services-swimming" id="services-swimming" tabindex="-1" checked>
+                  <label class="filter-checkbox-items" for="services-swimming" tabindex="0">
                     Бассейн
                   </label>              
                 </li>
                 <li>
-                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="services-parking" id="services-parking">                
-                  <label class="filter-checkbox-items" for="services-parking">
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="services-parking" id="services-parking" tabindex="-1">                
+                  <label class="filter-checkbox-items" for="services-parking" tabindex="0">
                     Парковка
                   </label>
                 </li>
                 <li>              
-                  <input class="visibility-hidden filter-checkbox" disabled type="checkbox" name="services-wifi" id="services-wifi">
-                  <label class="filter-checkbox-items" for="services-wifi">
+                  <input class="visibility-hidden filter-checkbox" disabled type="checkbox" name="services-wifi" id="services-wifi" tabindex="-1">
+                  <label class="filter-checkbox-items" for="services-wifi" tabindex="0">
                     Wi-Fi
                   </label>
                 </li>
@@ -62,20 +62,20 @@
               <legend>Тип жилья:</legend>   
               <ul>     
                 <li>      
-                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="type-hotel" id="type-hotel" checked>
-                  <label class="filter-checkbox-items" for="type-hotel">
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="type-hotel" id="type-hotel" tabindex="-1" checked>
+                  <label class="filter-checkbox-items" for="type-hotel" tabindex="0">
                     Гостиница
                   </label>
                 </li>
                 <li>
-                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="type-motel" disabled checked id="type-motel">
-                  <label class="filter-checkbox-items" for="type-motel">
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" name="type-motel" disabled checked id="type-motel" tabindex="-1">
+                  <label class="filter-checkbox-items" for="type-motel" tabindex="0">
                     Мотель
                   </label>
                 </li>
                 <li>
-                  <input class="visibility-hidden filter-checkbox" type="checkbox" id="type-apartments" name="type-apartments" checked>
-                  <label class="filter-checkbox-items" for="type-apartments">
+                  <input class="visibility-hidden filter-checkbox" type="checkbox" id="type-apartments" name="type-apartments" tabindex="-1" checked>
+                  <label class="filter-checkbox-items" for="type-apartments" tabindex="0">
                     Апартаменты
                   </label>
                 </li>
@@ -92,8 +92,8 @@
               <div class="filter-cost-slider">
                 <div class="filter-cost-slider-progress"></div>
               </div>
-              <div aria-label="Ползунок минимального уровня цены"  class="range-toggle range-toggle-min"></div>
-              <div aria-label="Ползунок максимального уровня цены" class="range-toggle range-toggle-max"></div>
+              <button aria-label="Ползунок минимального уровня цены"  class="range-toggle range-toggle-min"></button>
+              <button aria-label="Ползунок максимального уровня цены" class="range-toggle range-toggle-max"></button>
             </div>
             <button type="submit" class="filter-cost-show-results">Показать</button>
           </div>
