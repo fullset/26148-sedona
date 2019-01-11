@@ -394,6 +394,7 @@ li.reason-description:last-child p {
 
 .hotel-searching-label {
     font-weight: bold;
+    flex-grow: 2;
 }
 
 .date-wrapper input {
