@@ -1,5 +1,5 @@
 body {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     background-color: #f2f2f2;
@@ -158,10 +158,11 @@ a {
 .abstract p {
     width: 490px;
     margin: 0;
+
+    text-align: center;
 }
 
 .abstract .short-description {
-    text-align: center;
     font-weight: bold;
     font-size: 21px;
     line-height: 1.24;
@@ -188,6 +189,7 @@ a {
 .other-reasons ul {
     list-style: none;
     display: flex;  
+    flex-wrap: wrap;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
@@ -196,6 +198,7 @@ a {
 .advantages ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
 }
@@ -203,7 +206,7 @@ a {
 .advantages li {
     width: 400px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     justify-content: flex-start;
     align-items: center;
     text-align: center;  
@@ -225,6 +228,7 @@ a {
 }
 
 .advantages p {
+    max-width: 290px;
     font-weight: normal;
     line-height: 1.5;   
     margin: 0;
@@ -245,6 +249,7 @@ a {
 }
 
 .reason-description h3 {
+    max-width: 160px;
     font-size: 21px;
     font-weight: bold;
     line-height: 1;    
@@ -252,11 +257,24 @@ a {
     padding: 0;
 }
 
-.reason-description p {     
+.reason-description p { 
+    max-width: 308px;    
     font-weight: normal;
     line-height: 1.5;
     margin: 0;
     padding: 0;
+}
+
+li.reason-description p {
+    max-width: 270px;    
+}
+
+li.reason-description:first-child p {
+    max-width: 215px;    
+}
+
+li.reason-description:last-child p {
+    max-width: 255px;    
 }
 
 .blue-gradient {
@@ -408,6 +426,7 @@ a {
 
 .date-wrapper button {
     position: absolute;    
+    top: 7px;
     right: 3px;
     background: none;
     border: none;
@@ -802,27 +821,46 @@ a {
     padding-right: 72px;
 }
 
-.sorting-results > p {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-right: 46px;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 1.24;
-}
-
-.sorting-settings {
-    flex-grow: 2;
-    display: flex;
-    align-items: center;
-    margin-top: 2px;
-}
-
-.sorting-settings > p,
+/*.sorting-settings > p,
 .sorting-type {
     font-size: 12px;
     line-height: 1.5;
     text-transform: uppercase;
+}*/
+
+.sorting-results p:first-child {
+    display: inline-block;
+    width: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 44px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.24;
+
+    vertical-align: top;
+}
+
+.sorting-results p:not(:first-child) {
+    width: 115px;
+    margin-top: 14px;
+}
+
+.sorting-results p:not(:first-child),
+.sorting-type {    
+    font-size: 12px;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+}
+
+.sorting-settings {    
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    max-width: 800px;
+    align-items: center;
+    margin-top: 2px;
 }
 
 .sorting-settings > p {
