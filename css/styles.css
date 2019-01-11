@@ -415,6 +415,22 @@ li.reason-description:last-child p {
     cursor: pointer;
 }
 
+.date-wrapper input::-webkit-input-placeholder {
+    color: #000;
+}
+
+.date-wrapper input:-ms-input-placeholder {
+    color: #000;
+}
+
+.date-wrapper input::-ms-input-placeholder {
+    color: #000;
+}
+
+.date-wrapper input::placeholder {
+    color: #000;
+}
+
 .date-wrapper input:hover {
     border: 2px solid #ebebeb;
     background-color: #ebebeb;
@@ -423,6 +439,7 @@ li.reason-description:last-child p {
 .date-wrapper input:focus {
     background-color: #fff;
     border: 2px solid #e5e5e5;
+    outline: 2px solid #e5e5e5;
 }
 
 .date-wrapper button {
@@ -456,6 +473,22 @@ li.reason-description:last-child p {
 .counter-wrapper {
     display: flex;
     align-items: center;
+}
+
+.counter-wrapper input::-webkit-input-placeholder {
+    color: #000;
+}
+
+.counter-wrapper input:-ms-input-placeholder {
+    color: #000;
+}
+
+.counter-wrapper input::-ms-input-placeholder {
+    color: #000;
+}
+
+.counter-wrapper input::placeholder {
+    color: #000;
 }
 
 .children-counter-wrapper,
@@ -678,11 +711,6 @@ li.reason-description:last-child p {
 }
 
 .filter-checkbox:checked:disabled + .filter-checkbox-items::before {
-    border: none;
-    content: url("../img/checkbox-on-2.svg");
-}
-
-.filter-checkbox:active:disabled + .filter-checkbox-items::before  {
     border: none;
     content: url("../img/checkbox-on-2.svg");
 }
